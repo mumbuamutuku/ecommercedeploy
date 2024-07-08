@@ -3,7 +3,6 @@ import { ProductProps } from "../../type";
 
 const AddToCartButton = ({className,
     title,
-    product,
   }: {
     className?: string;
     title?: string;
