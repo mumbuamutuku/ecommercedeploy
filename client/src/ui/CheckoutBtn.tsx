@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { CartProduct } from '../../type';
+import { CartProduct } from '../lib/store';
 import { store } from '../lib/store';
 import { loadStripe } from "@stripe/stripe-js";
 import { config } from '../../config';
