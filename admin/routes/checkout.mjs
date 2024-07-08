@@ -3,7 +3,10 @@ import Stripe from 'stripe';
 
 const router = Router();
 
-const stripeSecretKey = process.env.STRIPE_STRIPE_KEY;
+const stripeSecretKey = process.env.STRIPE_SECRET_KEY || 'sk_test_51PTkk9Ro48HJquyfoOjBB6eVMJs5kNsYH9VSmG8Aqoba0G08v2st6VBeDNq8CXUAAKb0dMX2hn5lbknIZYju6vpC00ov0Z7pNw';
+
+
+//process.env.STRIPE_STRIPE_KEY;
 
 router.post('/checkout', async(req, res) => {
     const stripe = new Stripe(stripeSecretKey, {
