@@ -59,3 +59,4 @@ export interface HighlightsType {
     paymentMethod: string;
     userEmail: string;
   }
+  

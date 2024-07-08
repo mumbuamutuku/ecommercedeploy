@@ -1,10 +1,10 @@
 import { Link } from 'react-router-dom';
-import { ProductProps } from '../../type';
+import { CartProduct } from '../../type';
 import { store } from '../lib/store';
 import { loadStripe } from "@stripe/stripe-js";
 import { config } from '../../config';
 
-const CheckoutBtn = ({ products }: {products: ProductProps}) => {
+const CheckoutBtn = ({ products }: {products: CartProduct[]}) => {
   const { currentUser }  = store();
   const publishableKey = "pk_test_51PTkk9Ro48HJquyfKdu1E3UBe1ruZt8dqNuZkvaknLgRgzrK1od1ooRvWaqjuH8lkZxxHWvaTFYDLaZnRXjylINs00ALirlEDl"
   const stripePromise = loadStripe(publishableKey);
